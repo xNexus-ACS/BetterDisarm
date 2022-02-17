@@ -6,7 +6,6 @@ namespace BetterDisarm
 {
     public class MainClass : Plugin<Config>
     {
-        public static MainClass Instance;
         public override string Name { get; } = "BetterDisarm";
         public override string Prefix { get; } = "better_disarm";
         public override string Author { get; } = "xNexus-ACS";
@@ -17,7 +16,6 @@ namespace BetterDisarm
 
         public override void OnEnabled()
         {
-            Instance = this;
             _event = new EventHandlers(this);
 
             Player.Hurting += _event.OnHurting;
@@ -28,7 +26,6 @@ namespace BetterDisarm
         {
             Player.Hurting -= _event.OnHurting;
 
-            Instance = null;
             _event = null;
             base.OnDisabled();
         }
