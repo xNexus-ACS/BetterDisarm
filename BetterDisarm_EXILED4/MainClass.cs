@@ -10,7 +10,7 @@ namespace BetterDisarm
         public override string Prefix { get; } = "better_disarm";
         public override string Author { get; } = "xNexus-ACS";
         public override Version Version { get; } = new Version(0, 1, 0);
-        public override Version RequiredExiledVersion { get; } = new Version(5, 0, 0);
+        public override Version RequiredExiledVersion { get; } = new Version(4, 2, 3);
 
         public EventHandlers _event;
 
