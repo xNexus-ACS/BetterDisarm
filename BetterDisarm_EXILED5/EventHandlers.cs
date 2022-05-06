@@ -12,7 +12,7 @@ namespace BetterDisarm
 
         public void OnHurting(HurtingEventArgs ev)
         {
-            if (ev.Target.IsCuffed & ev.Attacker.IsHuman)
+            if (ev.Target.IsCuffed && ev.Attacker.IsHuman)
             {
                 ev.IsAllowed = false;
                 ev.Attacker.ShowHint(plugin.Config.AttackerHint, plugin.Config.AttackerHintDuration);
