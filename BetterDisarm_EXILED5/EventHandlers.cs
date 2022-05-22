@@ -17,6 +17,9 @@ namespace BetterDisarm
                 ev.IsAllowed = false;
                 ev.Attacker.ShowHint(plugin.Config.AttackerHint, plugin.Config.AttackerHintDuration);
             }
+
+            if (ev.Target.IsCuffed && ev.Attacker.IsScp)
+                ev.IsAllowed = true;
         }
     }
 }
